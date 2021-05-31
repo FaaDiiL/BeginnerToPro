@@ -5,10 +5,6 @@ import Posts from './components/Posts'
 import './App.css';
 
 function App() {
-
-  // TODO 1. save the data you fetch to an object
-  // Todo 2. Use the data like this
-    // TODO 2 <div> <h1>{title}</h1> <h3>{id}</h3> <textarea>{body}</textarea> </div>
     let [myUsersData, setMyUsersData] = useState([])
     
     function addUser(e){
@@ -17,9 +13,17 @@ function App() {
         fetch('https://randomuser.me/api/')
         .then((response) => response.json())
         .then((usersData) => {
+          
           setMyUsersData([...myUsersData, ...usersData.results])
+          
+          let test = myUsersData.reduce((acc, cur)=>{
+            return acc + cur
+          })
+          console.log(test)
         })
       }
+
+
       
       useEffect(() => {
         console.log(myUsersData)
