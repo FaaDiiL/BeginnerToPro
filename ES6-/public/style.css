@@ -1,0 +1,24 @@
+body{
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     max-width: 1024px;
+}
+#root {
+     
+     min-height: 500px;
+     min-width: 500px;
+     background-color: teal;
+     padding: 40px;
+}
+
+img {
+     max-width: 100%;
+     display: block;
+}
+
+
+.remove-dots {
+     list-style-type: none;
+}
