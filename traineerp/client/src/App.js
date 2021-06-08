@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 
+import Fadil from './components/Fadil'
 import Posts from './components/Posts'
 
 import './App.css';
@@ -32,11 +33,12 @@ function App() {
     
   return (
     <div className="App">
-    <Posts />
+    <Fadil />
+    {/* <Posts />
       <button onClick={addUser}>Generate User</button>
         {
             myUsersData.map((user)=>(<div key={user.login.uuid}><h1>{user.name.first}</h1> <img src={user.picture.large} alt={user.name.first} /></div>))
-        }
+        } */}
     </div>
   );
 }

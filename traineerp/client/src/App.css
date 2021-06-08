@@ -1,0 +1,15 @@
+html{
+  font-size: 62.5%;
+}
+.App {
+  text-align: center;
+}
+
+.formStyling {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.form{
+  margin-bottom: 10px;;
+}
