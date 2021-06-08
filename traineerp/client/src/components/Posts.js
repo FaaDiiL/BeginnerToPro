@@ -32,7 +32,7 @@ function Posts() {
   // p body
   return (
     <div>
-      <button onClick={fetchData}>Click Me! </button>
+      {/* <button onClick={fetchData}>Click Me! </button> */}
       <ul>
         {posts.map((post) => (
           <Post key={post.id} {...post} />
