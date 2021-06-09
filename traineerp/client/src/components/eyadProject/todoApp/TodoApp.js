@@ -1,4 +1,4 @@
-import React, {useState, useEffect}from 'react'
+import React from 'react'
 
 
 
@@ -10,7 +10,7 @@ import React, {useState, useEffect}from 'react'
 
 function TodoApp() {
 
-    const [todo, setTodo] = useState('') 
+    // const [todo, setTodo] = useState('') 
 
     const  handleChange = (e)=> {
 
