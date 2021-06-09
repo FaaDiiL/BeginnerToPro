@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {v4} from 'uuid'
+import EyadForm from './EyadForm'
+import EyadUl from './EyadUl'
 
 function Eyad() {
     const [notes, setNotes] = useState([])
@@ -31,26 +33,9 @@ function Eyad() {
     return (
         <div className='formStyling'>
             <h1>Eyad's Note App!</h1>
-            <form onSubmit={handleSubmit}>
-            <input onChange={(e) => setTitle(e.target.value)} type='text' name='title' className='form' />
-            <textarea onChange={(e) => setBody(e.target.value)}  type='text' name='body' className='form' />
-
-            <button>Add Note</button>
-            </form>
-        <ul>
-            {
-                
-                notes.map(({id, title, body})=>(
-                    
-                      <li key={id}>
-                          <h1>{title}</h1>
-                          <p>{body}</p>
-                      </li>
-                        
-                    
-                ))
-            }
-        </ul>
+            <EyadForm handleSubmit={handleSubmit} setTitle={setTitle} setBody={setBody} />
+            <EyadUl notes={notes}/>
+        
          
         </div>
     )

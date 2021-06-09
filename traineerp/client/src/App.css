@@ -10,12 +10,7 @@ html{
   display: flex;
   flex-direction: column;
 }
-<<<<<<< HEAD
-.form{
-  margin-bottom: 10px;;
-=======
 
 .form{
   margin-bottom: 10px;
->>>>>>> e86d558655bae95a52958eaa0dbaa737140721f6
 }
