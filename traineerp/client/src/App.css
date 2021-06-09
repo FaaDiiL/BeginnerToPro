@@ -1,21 +1,23 @@
 html{
   font-size: 62.5%;
+  width: 1024px;
+  margin: 0 auto;
 }
 .App {
   text-align: center;
 }
 
+.TodoApp{
+  display: flex;
+  flex-direction:column;
+
+}
 .formStyling {
   width: 250px;
   display: flex;
   flex-direction: column;
 }
-<<<<<<< HEAD
-.form{
-  margin-bottom: 10px;;
-=======
 
 .form{
   margin-bottom: 10px;
->>>>>>> e86d558655bae95a52958eaa0dbaa737140721f6
 }
