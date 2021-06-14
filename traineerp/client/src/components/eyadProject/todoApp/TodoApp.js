@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function TodoApp() {
     // TodoApp
@@ -6,7 +6,7 @@ function TodoApp() {
     // Todo 1.2 - Lista med alla todos /  Todo-title buttons=>(Done||Edit||Delete)
     // Todo 1.3 - Skapa en console.log()
     // Todo 2.0 - Spara till localStorage
-    // Todo 3.0 - läsa / skriva till localStorage,
+    // Todo 3.0 - lÃ¤sa / skriva till localStorage,
 
    
     const [todos, setTodos] = useState([])
@@ -19,34 +19,20 @@ function TodoApp() {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setTodos([...todos, { title, isDone }])
+        setTodos([...todos, { title, isDone}])
     }
 
     const handleDone = (e) => {
          e.target.checked = 
          setIsDone(e.target.checked)
-      
-     //    if(isDone === e.target.checked){
-           
-     //    }else {
-            
-     //    }
-     //      = false
-     //     console.log(e.target)
-        
-     //    if (isDone === true) {
-     //        console.log('Todo is Done')
-     //    } else {
-     //        console.log('Todo is not Done')
-     //    }
     }
-    const handleEdit = () => {
-        console.log('Todo is edited')
+    const handleEdit = (e) => {
+        setTodos(todos.find((todo,i) => i === +e.target.id))
     }
 
-    const handleDelete = () => {
-        console.log('Todo is deleted')
-
+    const handleDelete = (e) => {
+        console.log('Todo is deleted', e.target.id)
+        setTodos(todos.filter((todo, i) => i !== +e.target.id ))
     }
 
 
@@ -66,7 +52,7 @@ function TodoApp() {
                               {title}
                               <input type='checkbox' onChange={handleDone} defaultChecked={isDone} />
                               <i className="far fa-edit " onClick={handleEdit} />
-                              <i className="fas fa-trash-alt" onClick={handleDelete} />
+                              <i className="fas fa-trash-alt" onClick={handleDelete} id={id} />
                          </span>
                     </li>
                  )
