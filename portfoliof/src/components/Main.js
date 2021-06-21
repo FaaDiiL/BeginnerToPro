@@ -1,6 +1,7 @@
 import React from 'react'
 
-import Portfolio from './Portfolio'
+import Portfolio from './Contact'
+import Contact from './Portfolio'
 
 function Main() {
      return (
@@ -58,6 +59,7 @@ function Main() {
                </ul>
              </section>
              <Portfolio />
+             <Contact />
           </main>
      )
 }
