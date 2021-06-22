@@ -1,29 +1,50 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
 function Contact() {
-    const [contactInfo, setContactInfo] = useState ({})
-    function handleSubmit(e){
-        e.preventDefault()
-        
-        if(e.target[0].value !=='' && e.target[1].value !=='' && e.target[2].value !==''){
-        setContactInfo({
-        Name: e.target[0].value,
-        Email: e.target[1].value,
-        Message: e.target[2].value,
-        })
+  const [contactsInfo, setContactsInfo] = useState([])
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [msg, setMsg] = useState('')
 
-        }
+  function handleSubmit(e) {
+    e.preventDefault()
+
+    if (name !== '' && email !== '' && msg !== '') {
+      setContactsInfo([
+        ...contactsInfo,
+        {
+          Name: name,
+          Email: email,
+          Message: msg,
+        },
+      ])
+    } else {
+      alert('You need to Write some Credentials!')
     }
-    return (
-        <form onSubmit={handleSubmit}>
-           <input type='text' name='name' placeholder='name'/>
-           <input type='email' name='email' placeholder='Email'/>
-           <input type='text' name='message' placeholder='Message'/>
-           <input type='submit' value='send'/>
-
-        </form>
-    )
+  }
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type='text'
+        name='name'
+        placeholder='name'
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        type='email'
+        name='email'
+        placeholder='Email'
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type='text'
+        name='message'
+        placeholder='Message'
+        onChange={(e) => setMsg(e.target.value)}
+      />
+      <input type='submit' value='send' />
+    </form>
+  )
 }
 
 export default Contact
-
