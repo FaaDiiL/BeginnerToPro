@@ -1,26 +1,55 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 
 function Contact() {
-     const [contactInfo, setContactInfo] = useState({})
-     function handleSubmit(e) {
-          e.preventDefault()
-          if(e.target[0].value !== '' && e.target[1].value !== '' && e.target[2].value !== ''){
-               setContactInfo({
-                    Name: e.target[0].value,
-                    Email: e.target[1].value,
-                    Message: e.target[2].value
-               })
-          }
-     }
+  const [contactsInfo, setContactsInfo] = useState([])
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [contactMsg, setContactMsg] = useState('')
 
-     return (
-          <form onSubmit={handleSubmit}>
-                <input type='text' name="name" placeholder="Name" />              
-                <input type='email' name="email" placeholder="Email" />              
-                <input type='text' name="message" placeholder="Message" />
-                <input type='submit' value='Send' />
-          </form>
-     )
+  function handleSubmit(e) {
+    e.preventDefault()
+    if (
+      e.target[0].value !== '' &&
+      e.target[1].value !== '' &&
+      e.target[2].value !== ''
+    ) {
+      setContactsInfo([
+        ...contactsInfo,
+        {
+          Name: name,
+          Email: email,
+          Message: contactMsg,
+        },
+      ])
+    }
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type='text'
+        name='name'
+        placeholder='Name'
+        onChange={(e) => setName(e.target.value)}
+      />
+
+      <input
+        type='email'
+        name='email'
+        placeholder='Email'
+        onChange={(e) => setEmail(e.target.value)}
+      />
+
+      <input
+        type='text'
+        name='message'
+        placeholder='Message'
+        onChange={(e) => setContactMsg(e.target.value)}
+      />
+
+      <input type='submit' value='Send' />
+    </form>
+  )
 }
 
 export default Contact
