@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 function Contact() {
   const [contactsInfo, setContactsInfo] = useState([])
@@ -6,8 +6,20 @@ function Contact() {
   const [email, setEmail] = useState('')
   const [msg, setMsg] = useState('')
 
+  useEffect(() => {
+   const storageTokenData = JSON.parse(localStorage.getItem('token'))
+   if(storageTokenData){
+       setContactsInfo(storageTokenData)
+   }
+  }, [])
+
+  useEffect(() => {
+   localStorage.setItem('token', JSON.stringify(contactsInfo))
+  }, [contactsInfo])
+
   function handleSubmit(e) {
     e.preventDefault()
+   
 
     if (name !== '' && email !== '' && msg !== '') {
       setContactsInfo([
