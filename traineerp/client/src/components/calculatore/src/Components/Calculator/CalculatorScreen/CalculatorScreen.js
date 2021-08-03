@@ -1,4 +1,5 @@
 import React from 'react'
+import './CalculatorScreen.css'
 
 function CalculatorScreen() {
   return (
