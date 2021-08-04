@@ -3,10 +3,17 @@ import CalculatorKeys from './CalculatorKeys/CalculatorKeys'
 import CalculatorScreen from './CalculatorScreen/CalculatorScreen'
 
 function Calculator() {
+  const buttonPressed = (e) => {
+    if (e.target.value !== undefined) {
+      console.log(e.target.value)
+    }
+  }
   return (
     <div className='calculator'>
       <CalculatorScreen />
-      <CalculatorKeys />
+      <div onClick={buttonPressed}>
+        <CalculatorKeys />
+      </div>
     </div>
   )
 }
