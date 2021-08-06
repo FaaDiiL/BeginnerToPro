@@ -1,12 +1,12 @@
 import React from 'react'
 import './CalculatorScreen.css'
 
-function CalculatorScreen() {
+function CalculatorScreen({ screen }) {
   return (
     <input
       type='text'
       className='calculator-screen'
-      defaultValue={0}
+      defaultValue={screen}
       disabled
     />
   )
