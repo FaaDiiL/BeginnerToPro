@@ -10,12 +10,20 @@ function Calculator() {
   const [firstPart, setFirstPart] = useState({ number: 0, completed: false })
   const [operator, setOperator] = useState({ operator: null, completed: false })
   const [secondPart, setSecondPart] = useState({ number: 0, completed: false })
-  const [screen, setScreen] = useState()
+  const [screen, setScreen] = useState(null)
   const [result, setResult] = useState(null)
 
   const getButtonValue = (e) => {
     if (e.target.value === undefined) {
       return
+    }
+    if (e.target.className === 'all-clear') {
+      setTapedNumbers([])
+      setFirstPart({ number: 0, completed: false })
+      setOperator({ operator: null, completed: false })
+      setSecondPart({ number: 0, completed: false })
+      setScreen(null)
+      setResult(null)
     }
     if (
       e.target.className === 'number-btn' &&
