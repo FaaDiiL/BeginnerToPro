@@ -4,18 +4,25 @@ import CalculatorKeys from './CalculatorKeys/CalculatorKeys'
 import CalculatorScreen from './CalculatorScreen/CalculatorScreen'
 
 function Calculator() {
-  const [clickedNumber, setClickedNumber] = useState(null)
+  const [clickedNumber, setClickedNumber] = useState([])
   const [firstPart, setFirstPart] = useState({ numbers: 0, completed: false })
   const [operator, setOperator] = useState({ operator: null, completed: false })
   const [secondPart, setSecondPart] = useState({ numbers: 0, completed: false })
-  const [screen, setScreen] = useState()
+  const [screen, setScreen] = useState(null)
   const [result, setResult] = useState(null)
 
   const buttonPressed = (e) => {
     if (e.target.value === undefined) {
       return
     }
-
+    if (e.target.className === 'all-clear') {
+      setClickedNumber([])
+      setFirstPart({ numbers: 0, completed: false })
+      setOperator({ operator: null, completed: false })
+      setSecondPart({ numbers: 0, completed: false })
+      setScreen(null)
+      setResult(null)
+    }
     // Fill State for firstPart
     if (
       e.target.className === 'number-btn' &&
