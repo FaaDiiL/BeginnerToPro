@@ -2,6 +2,8 @@ import { useState } from 'react'
 import './Calculator.css'
 import CalculatorKeys from './CalculatorKeys/CalculatorKeys'
 import CalculatorScreen from './CalculatorScreen/CalculatorScreen'
+import Header from './../Header/Header'
+import Footer from '../Footer/Footer'
 
 function Calculator() {
   const [clickedNumber, setClickedNumber] = useState([])
@@ -85,11 +87,18 @@ function Calculator() {
   }
 
   return (
-    <div className='calculator'>
-      <CalculatorScreen screen={screen} />
-      <div onClick={buttonPressed}>
-        <CalculatorKeys />
+    <div className='wrapper'>
+      <div>
+        <Header />
+
+        <div className='calculator'>
+          <CalculatorScreen screen={screen} />
+          <div onClick={buttonPressed}>
+            <CalculatorKeys />
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }
