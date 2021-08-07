@@ -7,3 +7,10 @@
   transform: translate(-50%, -50%);
   width: 400px;
 }
+
+.wrapper {
+  display: flex;
+  font-size: 2.5em;
+  justify-content: center;
+  padding-top: 20px;
+}
