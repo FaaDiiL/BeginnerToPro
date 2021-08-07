@@ -7,6 +7,7 @@ function Calculator() {
   const [clickedNumber, setClickedNumber] = useState([])
   const [firstPart, setFirstPart] = useState({ numbers: 0, completed: false })
   const [operator, setOperator] = useState({ operator: null, completed: false })
+  const [decimal, setDecimal] = useState({ completed: false })
   const [secondPart, setSecondPart] = useState({ numbers: 0, completed: false })
   const [screen, setScreen] = useState(null)
   const [result, setResult] = useState(null)
@@ -15,10 +16,12 @@ function Calculator() {
     if (e.target.value === undefined) {
       return
     }
+
     if (e.target.className === 'all-clear') {
       setClickedNumber([])
       setFirstPart({ numbers: 0, completed: false })
       setOperator({ operator: null, completed: false })
+      setDecimal({ completed: false })
       setSecondPart({ numbers: 0, completed: false })
       setScreen(null)
       setResult(null)
@@ -32,8 +35,14 @@ function Calculator() {
       setClickedNumber(Number([clickedNumber, e.target.value].join('')))
       setScreen(Number([clickedNumber, e.target.value].join('')))
     }
+    if (e.target.className === 'decimal' && !decimal.completed) {
+      setDecimal({ completed: true })
+      setClickedNumber(Number([clickedNumber].join('')) + e.target.value)
+      setScreen(Number([clickedNumber].join('')) + e.target.value)
+    }
     // Fill State for operator
     if (e.target.className === 'operator' && !operator.completed) {
+      setDecimal({ completed: false })
       setOperator({
         operator: e.target.value,
         completed: true,
