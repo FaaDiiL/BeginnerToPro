@@ -9,6 +9,7 @@ function Calculator() {
   const [tapedNumbers, setTapedNumbers] = useState([])
   const [firstPart, setFirstPart] = useState({ number: 0, completed: false })
   const [operator, setOperator] = useState({ operator: null, completed: false })
+  const [decimal, setDecimal] = useState({ completed: false })
   const [secondPart, setSecondPart] = useState({ number: 0, completed: false })
   const [screen, setScreen] = useState(null)
   const [result, setResult] = useState(null)
@@ -21,6 +22,7 @@ function Calculator() {
       setTapedNumbers([])
       setFirstPart({ number: 0, completed: false })
       setOperator({ operator: null, completed: false })
+      setDecimal({ completed: false })
       setSecondPart({ number: 0, completed: false })
       setScreen(null)
       setResult(null)
@@ -32,10 +34,16 @@ function Calculator() {
       setTapedNumbers(Number([tapedNumbers, e.target.value].join('')))
       setScreen(Number([tapedNumbers, e.target.value].join('')))
     }
+    if (e.target.className === 'decimal' && !decimal.completed) {
+      setDecimal({ completed: true })
+      setTapedNumbers(Number([tapedNumbers].join('')) + e.target.value)
+      setScreen(Number([tapedNumbers].join('')) + e.target.value)
+    }
     if (e.target.className === 'operator' && !operator.completed) {
+      setDecimal({ completed: false })
       setOperator({ operator: e.target.value, completed: true })
       setFirstPart({
-        number: Number([tapedNumbers].join('')),
+        number: Number([tapedNumbers].join('')) + operator.operator,
         completed: true,
       })
       setTapedNumbers(Number(null))
