@@ -1,12 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cinzel:wght@700&display=swap');
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  background: #83a4d4; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #b6fbff,
+    #83a4d4
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    #b6fbff,
+    #83a4d4
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .all-clear {
@@ -22,13 +38,21 @@ button {
   height: 60px;
   background-color: #fff;
   border-radius: 3px;
-  border: 1px solid #c4c4c4;
+  border: 0.1px solid #f0f0f0;
   background-color: transparent;
   font-size: 2rem;
   color: #333;
-  background-image: linear-gradient(to bottom,transparent,transparent 50%,rgba(0,0,0,.04));
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), inset 0 1px 0 0 rgba(255,255,255,.45), inset 0 -1px 0 0 rgba(255,255,255,.15), 0 1px 0 0 rgba(255,255,255,.15);
-  text-shadow: 0 1px rgba(255,255,255,.4);
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 50%,
+    rgba(0, 0, 0, 0.04)
+  );
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.15),
+    0 1px 0 0 rgba(255, 255, 255, 0.15);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.4);
 }
 
 button:hover {
@@ -45,7 +69,7 @@ button:hover {
 .calculator-keys {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  grid-gap: 5px;
   padding: 20px;
 }
 .equal-sign {
@@ -54,4 +78,24 @@ button:hover {
   color: #fff;
   height: 100%;
   grid-area: 2 / 4 / 6 / 5;
+}
+.equal-sign:hover {
+  background-color: rgb(70, 140, 187);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  /* font-family: 'Cinzel', serif; */
+  font-family: 'Alice', serif;
+  text-decoration: underline;
 }
