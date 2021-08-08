@@ -36,6 +36,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 <br />
@@ -44,7 +45,7 @@
 
 <p align="center">
   <a href="https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatore">
-   <img src="[src\img\bev-iphone11promax.svg](https://user-images.githubusercontent.com/18538595/128628571-262cd707-139d-4411-80c3-9a893f9d9e77.png)" alt="Screenshot">
+   <img src="https://user-images.githubusercontent.com/18538595/128630010-fe63411f-2a8b-4fee-a18d-a5ecfacaf7b9.png" alt="Screenshot">
   </a>
 </p>
 
@@ -104,5 +105,9 @@ To setup this project locally you may follow the installation steps below.
 **Project Members**
 
 - [Fadil Al Farhan](https://github.com/FaaDiiL)
+
+## Credits
+
+Parts of the CSS is borrowed from [Ayo Isaiah](https://freshman.tech/calculator/)
 
 Project Link: [React calculator v1.0](https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatorf)
