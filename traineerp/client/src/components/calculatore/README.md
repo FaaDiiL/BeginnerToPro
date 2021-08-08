@@ -1,70 +1,112 @@
-# Getting Started with Create React App
+# React Calculator V1.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<p align="center">
 
-## Available Scripts
+  <h1 align="center">React calculator V1.0</h1>
 
-In the project directory, you can run:
+  <p align="center">
+    This is a calculator created in React!
+    This is only an alpha version so please report all bugs you can find.
+    <br />
+    <br />
+    <a href="https://alfa-react-calculator.surge.sh/"><strong>View Demo »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/FaaDiiL/BeginnerToPro/issues/new">Report Bug</a>
+    ·
+    <a href="https://github.com/FaaDiiL/BeginnerToPro/issues/new">Request Feature</a>
+  </p>
+</p>
+<br />
 
-### `npm start`
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+<br />
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## About The Project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<p align="center">
+  <a href="https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatore">
+    ![ECalc](https://user-images.githubusercontent.com/18538595/128628290-4843fbe9-d966-44a3-b9bf-69f3530185e2.png)
+  </a>
+</p>
 
-### `npm test`
+### Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [React](https://reactjs.org/)
+- [Figma](https://figma.com/)
+- [Surge](https://surge.sh/)
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To setup this project locally you may follow the installation steps below.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Update the latest version of your package manager
+   ```sh
+   npm install npm@latest -g
+   ```
+2. Run npm install -g github-files-fetcher
+   ```sh
+   npm install -g github-files-fetcher
+   ```
+3. Run this command to fetch the project
 
-### `npm run eject`
+```sh
+    fetcher --file="./" --url="https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatore"
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+4. Run this command to change path to the project directory
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```sh
+    cd calculatore
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+5. Install NPM packages
+   ```sh
+   npm install
+   ```
+6. To start the app run the command
+   ```sh
+   npm start
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Usage
 
-## Learn More
+1. Insert the first value
+2. Press one of the operators (+),(-),(\*) or (/)
+3. Insert the second value
+4. Press (=) button to get the result.
+5. To try again please press the (AC) button and repeat the steps above.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<a href="https://alfa-react-calculator.surge.sh/"><strong>View demo to try it out »</strong></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
 
-### Code Splitting
+** Project Members ** -[Eyad Al Farhan](https://github.com/eyadal)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Project Link:
+[React Calculator V1.0](https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatore)
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
