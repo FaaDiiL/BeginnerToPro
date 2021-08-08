@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react'
 
+import Header from '../Header/Header'
 import CalculatorKeys from './CalculatorKeys/CalculatorKeys'
 import CalculatorScreen from './CalculatorScreen/CalculatorScreen'
 
 import './Calculator.css'
+import Footer from '../Footer/Footer'
 
 function Calculator() {
   const [tapedNumbers, setTapedNumbers] = useState([])
@@ -79,11 +81,18 @@ function Calculator() {
   }
 
   return (
-    <div className='calculator'>
-      <CalculatorScreen screen={screen} />
-      <div onClick={getButtonValue}>
-        <CalculatorKeys />
+    <div className='wrapper'>
+      <div>
+        <Header />
+
+        <div className='calculator'>
+          <CalculatorScreen screen={screen} />
+          <div onClick={getButtonValue}>
+            <CalculatorKeys />
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }

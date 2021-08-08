@@ -1,0 +1,20 @@
+footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  align-self: stretch;
+  text-align: center;
+  padding: 50px;
+  color: #eaeaea;
+}
+
+footer small {
+  font-size: 1.8rem;
+}
+
+footer small a {
+  color: rgb(219, 0, 0);
+  text-decoration: none;
+}
+footer small a:hover {
+  color: red;
+  text-decoration: underline;
+}
