@@ -36,6 +36,7 @@
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#credits">Credits</a></li>
   </ol>
 </details>
 <br />
@@ -104,5 +105,9 @@ To setup this project locally you may follow the installation steps below.
 **Project Members**
 
 - [Fadil Al Farhan](https://github.com/FaaDiiL)
+
+## Credits
+
+Parts of the CSS is borrowed from [Ayo Isaiah](https://freshman.tech/calculator/)
 
 Project Link: [React calculator v1.0](https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatorf)
