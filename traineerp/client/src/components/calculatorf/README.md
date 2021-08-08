@@ -44,7 +44,7 @@
 
 <p align="center">
   <a href="https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatore">
-   <img src="https://user-images.githubusercontent.com/18538595/128628571-262cd707-139d-4411-80c3-9a893f9d9e77.png" alt="Screenshot">
+   <img src="https://user-images.githubusercontent.com/18538595/128630010-fe63411f-2a8b-4fee-a18d-a5ecfacaf7b9.png" alt="Screenshot">
   </a>
 </p>
 
