@@ -45,7 +45,7 @@
 
 <p align="center">
   <a href="https://github.com/FaaDiiL/BeginnerToPro/tree/main/traineerp/client/src/components/calculatore">
-    ![ECalc](https://user-images.githubusercontent.com/18538595/128628290-4843fbe9-d966-44a3-b9bf-69f3530185e2.png)
+  <img src="https://user-images.githubusercontent.com/18538595/128628290-4843fbe9-d966-44a3-b9bf-69f3530185e2.png" alt="Screenshot">
   </a>
 </p>
 
