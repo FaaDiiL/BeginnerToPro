@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 function Contact() {
-  const [contactsInfo, setContactsInfo] = useState()
+  const [contactsInfo, setContactsInfo] = useState([])
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [contactMsg, setContactMsg] = useState('')
