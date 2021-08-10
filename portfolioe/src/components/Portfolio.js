@@ -22,7 +22,7 @@ function Portfolio() {
   }, [])
 
   return (
-    <div>
+    <div className='portfolio'>
       <h2>Portfolio</h2>
       <h3>Last Edited Repository</h3>
       <ul>
