@@ -1,3 +1,4 @@
+import { Container } from '@material-ui/core/'
 import React from 'react'
 
 import Footer from './components/Footer'
@@ -8,11 +9,11 @@ import './App.css'
 
 function App() {
   return (
-    <div className='wrapper'>
+    <Container className='wrapper'>
      <Header />
      <Main />
      <Footer />
-    </div>
+    </Container>
   )
 }
 
