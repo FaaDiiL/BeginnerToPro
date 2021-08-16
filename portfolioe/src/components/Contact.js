@@ -8,10 +8,6 @@ const useStyles = makeStyles((theme) => ({
   button: {
     margin: theme.spacing(1),
   },
-  textArea: {
-    marginTop: '15px',
-    paddingTop: '15px',
-  },
 }))
 function Contact() {
   const [contactsInfo, setContactsInfo] = useState([])
@@ -65,20 +61,19 @@ function Contact() {
         onChange={(e) => setEmail(e.target.value)}
         className='email-field'
       />
+      <div className='msg-box'>
+        <TextField
+          id='outlined-multiline-static'
+          label='Message'
+          multiline
+          rows={4}
+          placeholder='Type message here..'
+          variant='outlined'
+          name='message'
+          onChange={(e) => setMsg(e.target.value)}
+        />
+      </div>
 
-      <br />
-      <TextField
-        id='outlined-multiline-static'
-        label='Message'
-        multiline
-        rows={4}
-        placeholder='Type message here..'
-        variant='outlined'
-        name='message'
-        onChange={(e) => setMsg(e.target.value)}
-        InputProps={{ className: classes.textArea }}
-        className='msg-box'
-      />
       <Button
         variant='contained'
         color='primary'
