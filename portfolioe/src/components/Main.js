@@ -1,5 +1,5 @@
 import React from 'react'
-import Portfolio from './Portfolio'
+import Project from './Project/Project'
 import Contact from './Contact'
 
 function Main() {
@@ -12,7 +12,6 @@ function Main() {
           developer!
         </p>
       </section>
-
       <section>
         <h3>Work Experience</h3>
         <ul>
@@ -86,7 +85,6 @@ function Main() {
           </li>
         </ul>
       </section>
-
       <section>
         <h2>Education</h2>
         <ul>
@@ -159,9 +157,15 @@ function Main() {
           </li>
         </ul>
       </section>
-
-      <Portfolio />
+      <section id='Portfolio' />
+      <h3>Last Edited Projects</h3>
+      <Project last={3} />
+      <h3>All Projects</h3>
+      <Project />
+      <section />
+      <section id='Contact' />
       <Contact />
+      section
     </main>
   )
 }
