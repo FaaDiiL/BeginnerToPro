@@ -59,7 +59,18 @@ footer {
 
 /*MEDIA QUERIES*/
 /* On screens that are 600px or more */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 0px) and (max-width: 599px) {
+  li {
+    display: flex;
+    flex-direction: column;
+    /* justify-items: space-evenly; */
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 0 10px;
+  }
+}
+/* On screens that are 600px or more */
+@media (min-width: 600px) and (max-width: 960px) {
   header {
     margin: 0 auto;
     width: 100%;
