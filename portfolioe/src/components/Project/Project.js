@@ -37,7 +37,7 @@ function Project({ last }) {
               return i <= 2
             })
             .map(({ name, updated_at, id, description, html_url }) => (
-              <Grid item xs={12} md={6} lg={4} key={id}>
+              <Grid item xs={12} sm={6} lg={4} key={id}>
                 <Card className={classes.root}>
                   <CardActionArea>
                     <CardMedia
@@ -82,9 +82,8 @@ function Project({ last }) {
               </Grid>
             ))
         : githubRepos.map(({ name, updated_at, id, description, html_url }) => (
-            <Grid item xs={12} md={6} lg={4} key={id}>
+            <Grid item xs={12} sm={6} lg={4} key={id}>
               <Card className={classes.root}>
-                (
                 <CardActionArea>
                   <CardMedia
                     component='img'
