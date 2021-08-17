@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { makeStyles } from '@material-ui/core/styles'
-import TextField from '@material-ui/core/TextField'
+import { Grid, TextField, Button } from '@material-ui/core'
 import { Send } from '@material-ui/icons'
-import Button from '@material-ui/core/Button'
 
 const useStyles = makeStyles((theme) => ({
   button: {
@@ -44,45 +43,47 @@ function Contact() {
     }
   }
   return (
-    <form className='contact-form' onSubmit={handleSubmit}>
-      <TextField
-        id='standard-basic'
-        label='Name'
-        name='name'
-        onChange={(e) => setName(e.target.value)}
-        className='name-field'
-      />
-
-      <TextField
-        id='standard-basic'
-        label='Email'
-        type='email'
-        name='email'
-        onChange={(e) => setEmail(e.target.value)}
-        className='email-field'
-      />
-      <div className='msg-box'>
+    <Grid item>
+      <form className='contact-form' onSubmit={handleSubmit}>
         <TextField
-          id='outlined-multiline-static'
-          label='Message'
-          multiline
-          rows={4}
-          placeholder='Type message here..'
-          variant='outlined'
-          name='message'
-          onChange={(e) => setMsg(e.target.value)}
+          id='standard-basic'
+          label='Name'
+          name='name'
+          onChange={(e) => setName(e.target.value)}
+          className='name-field'
         />
-      </div>
 
-      <Button
-        variant='contained'
-        color='primary'
-        className={classes.button}
-        endIcon={<Send />}
-      >
-        SEND
-      </Button>
-    </form>
+        <TextField
+          id='standard-basic'
+          label='Email'
+          type='email'
+          name='email'
+          onChange={(e) => setEmail(e.target.value)}
+          className='email-field'
+        />
+        <div className='msg-box'>
+          <TextField
+            id='outlined-multiline-static'
+            label='Message'
+            multiline
+            rows={4}
+            placeholder='Type message here..'
+            variant='outlined'
+            name='message'
+            onChange={(e) => setMsg(e.target.value)}
+          />
+        </div>
+
+        <Button
+          variant='contained'
+          color='primary'
+          className={classes.button}
+          endIcon={<Send />}
+        >
+          SEND
+        </Button>
+      </form>
+    </Grid>
   )
 }
 
