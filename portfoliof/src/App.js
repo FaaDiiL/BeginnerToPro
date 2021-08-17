@@ -1,4 +1,4 @@
-import { Container } from '@material-ui/core/'
+import { Container, Grid } from '@material-ui/core/'
 import React from 'react'
 
 import Footer from './components/Footer'
@@ -10,9 +10,11 @@ import './App.css'
 function App() {
   return (
     <Container className='wrapper'>
-     <Header />
-     <Main />
-     <Footer />
+      <Header />
+      <Grid container>
+        <Main />
+      </Grid>
+      <Footer />
     </Container>
   )
 }
